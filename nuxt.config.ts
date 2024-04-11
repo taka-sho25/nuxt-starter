@@ -2,7 +2,13 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/storybook', '@nuxt/test-utils/module'],
+  modules: [
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/storybook',
+    '@nuxt/test-utils/module',
+  ],
+
+  css: ['@/assets/css/reset.css'],
 
   components: [
     {
