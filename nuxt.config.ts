@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/google-fonts',
+    // https://github.com/nuxt-modules/storybook/issues/470
     // '@nuxtjs/storybook',
     '@nuxt/test-utils/module',
   ],
