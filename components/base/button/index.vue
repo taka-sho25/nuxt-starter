@@ -16,7 +16,6 @@
   const emits = defineEmits<Emits>();
 
   const onClick = (event: Event) => {
-    event.preventDefault();
     const { target } = event;
     if (target instanceof HTMLButtonElement) {
       emits('onClick');

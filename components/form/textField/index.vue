@@ -1,10 +1,11 @@
 <script setup lang="ts">
   type Props = {
     modelValue: string;
-    type: 'text' | 'number' | 'password';
+    type?: 'text' | 'number' | 'password';
     name?: string;
     placeholder: string;
     disabled?: boolean;
+    error?: string;
   };
 
   interface Emits {
@@ -17,6 +18,7 @@
     name: '',
     placeholder: '',
     disabled: false,
+    error: '',
   });
   const emits = defineEmits<Emits>();
 
@@ -30,12 +32,24 @@
 </script>
 
 <template>
-  <input
-    :name="name"
-    :type="type"
-    :value="modelValue"
-    :placeholder="placeholder"
-    :disabled="disabled"
-    @input="onChange"
-  />
+  <div>
+    <input
+      :name="name"
+      :type="type"
+      :value="modelValue"
+      :placeholder="placeholder"
+      :disabled="disabled"
+      autocomplete="off"
+      @input="onChange"
+    />
+    <Text v-if="error" as="span" :size="10" class="error-message">
+      {{ error }}
+    </Text>
+  </div>
 </template>
+
+<style scoped>
+  .error-message {
+    color: #f00;
+  }
+</style>
