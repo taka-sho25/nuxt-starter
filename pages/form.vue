@@ -25,7 +25,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="form-wrapper">
     <form @submit="onSubmit">
       <TextField
         v-model="text"
