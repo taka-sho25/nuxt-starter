@@ -15,3 +15,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - ✅ Form with [vee-validate](https://github.com/logaretm/vee-validate/)
 
 - ✅ Validate with [@vee-validate/zod](https://vee-validate.logaretm.com/v4/integrations/zod-schema-validation/)
+
+- ✅ Api Client with [aspida](https://github.com/aspida/aspida#readme)
+
+- ✅ Api Mock with [aspida-mock](https://github.com/aspida/aspida-mock#readme)

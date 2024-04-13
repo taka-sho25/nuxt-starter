@@ -2,6 +2,14 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
+  runtimeConfig: {
+    public: {
+      appStage: '',
+      baseUrl: '',
+    },
+  },
+
   modules: [
     '@nuxtjs/google-fonts',
     // https://github.com/nuxt-modules/storybook/issues/470

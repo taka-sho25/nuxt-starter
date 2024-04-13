@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --dotenv .env.development",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -12,10 +12,14 @@
     "lint": "eslint --ignore-path .gitignore .",
     "fix": "eslint --fix --ignore-path .gitignore .",
     "test": "vitest",
-    "test:update": "vitest -u"
+    "test:update": "vitest -u",
+    "api:build": "aspida && aspida-mock"
   },
   "dependencies": {
+    "@aspida/fetch": "^1.14.0",
     "@vee-validate/zod": "^4.12.6",
+    "aspida": "^1.14.0",
+    "aspida-mock": "^0.11.1",
     "nuxt": "^3.11.2",
     "vee-validate": "^4.12.6",
     "vue": "^3.4.21",
