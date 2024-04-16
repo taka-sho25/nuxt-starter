@@ -2,5 +2,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit"
-  }
+  },
+  "eslint.experimental.useFlatConfig": true
 }

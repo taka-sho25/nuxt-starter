@@ -9,28 +9,28 @@
     error?: string;
   };
 
-  interface Emits {
-    (eventName: 'update:modelValue', value: string): void;
+interface Emits {
+  (eventName: 'update:modelValue', value: string): void;
+}
+
+withDefaults(defineProps<Props>(), {
+  modelValue: '',
+  name: '',
+  rows: 2,
+  cols: 20,
+  placeholder: '',
+  disabled: false,
+  error: '',
+});
+const emits = defineEmits<Emits>();
+
+const onChange = (event: Event) => {
+  event.preventDefault();
+  const { target } = event;
+  if (target instanceof HTMLTextAreaElement) {
+    emits('update:modelValue', target.value);
   }
-
-  withDefaults(defineProps<Props>(), {
-    modelValue: '',
-    name: '',
-    rows: 2,
-    cols: 20,
-    placeholder: '',
-    disabled: false,
-    error: '',
-  });
-  const emits = defineEmits<Emits>();
-
-  const onChange = (event: Event) => {
-    event.preventDefault();
-    const { target } = event;
-    if (target instanceof HTMLTextAreaElement) {
-      emits('update:modelValue', target.value);
-    }
-  };
+};
 </script>
 
 <template>
@@ -44,7 +44,12 @@
       :disabled="disabled"
       @input="onChange"
     />
-    <Text v-if="error" as="span" :size="10" class="error-message">
+    <Text
+      v-if="error"
+      as="span"
+      :size="10"
+      class="error-message"
+    >
       {{ error }}
     </Text>
   </div>

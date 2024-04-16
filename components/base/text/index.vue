@@ -6,26 +6,26 @@
     lineClamp?: number;
   };
 
-  const props = withDefaults(defineProps<Props>(), {
-    as: 'div',
-    size: 14,
-    weight: 'medium',
-    lineClamp: 0,
-  });
+const props = withDefaults(defineProps<Props>(), {
+  as: 'div',
+  size: 14,
+  weight: 'medium',
+  lineClamp: 0,
+});
 
-  const tag = computed(() => props.as);
+const tag = computed(() => props.as);
 
-  const lineClamp = computed(() => {
-    return props.lineClamp
-      ? {
-          overflow: 'hidden',
-          display: '-webkit-box',
-          textOverflow: 'ellipsis',
-          WebkitBoxOrient: 'vertical',
-          WebkitLineClamp: props.lineClamp,
-        }
-      : {};
-  });
+const lineClamp = computed(() => {
+  return props.lineClamp
+    ? {
+        overflow: 'hidden',
+        display: '-webkit-box',
+        textOverflow: 'ellipsis',
+        WebkitBoxOrient: 'vertical',
+        WebkitLineClamp: props.lineClamp,
+      }
+    : {};
+});
 </script>
 
 <template>

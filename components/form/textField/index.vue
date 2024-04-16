@@ -8,27 +8,27 @@
     error?: string;
   };
 
-  interface Emits {
-    (eventName: 'update:modelValue', value: string): void;
+interface Emits {
+  (eventName: 'update:modelValue', value: string): void;
+}
+
+withDefaults(defineProps<Props>(), {
+  modelValue: '',
+  type: 'text',
+  name: '',
+  placeholder: '',
+  disabled: false,
+  error: '',
+});
+const emits = defineEmits<Emits>();
+
+const onChange = (event: Event) => {
+  event.preventDefault();
+  const { target } = event;
+  if (target instanceof HTMLInputElement) {
+    emits('update:modelValue', target.value);
   }
-
-  withDefaults(defineProps<Props>(), {
-    modelValue: '',
-    type: 'text',
-    name: '',
-    placeholder: '',
-    disabled: false,
-    error: '',
-  });
-  const emits = defineEmits<Emits>();
-
-  const onChange = (event: Event) => {
-    event.preventDefault();
-    const { target } = event;
-    if (target instanceof HTMLInputElement) {
-      emits('update:modelValue', target.value);
-    }
-  };
+};
 </script>
 
 <template>
@@ -42,7 +42,12 @@
       autocomplete="off"
       @input="onChange"
     />
-    <Text v-if="error" as="span" :size="10" class="error-message">
+    <Text
+      v-if="error"
+      as="span"
+      :size="10"
+      class="error-message"
+    >
       {{ error }}
     </Text>
   </div>

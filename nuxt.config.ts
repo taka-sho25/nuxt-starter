@@ -11,11 +11,20 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    '@nuxt/eslint',
     '@nuxtjs/google-fonts',
     // https://github.com/nuxt-modules/storybook/issues/470
     // '@nuxtjs/storybook',
     '@nuxt/test-utils/module',
   ],
+
+  eslint: {
+    config: {
+      stylistic: {
+        semi: true,
+      },
+    },
+  },
 
   css: ['@/assets/css/reset.css'],
 
