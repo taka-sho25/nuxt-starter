@@ -6,8 +6,8 @@ import { defineVitestConfig } from '@nuxt/test-utils/config';
 export default defineVitestConfig({
   resolve: {
     alias: {
-      '~': path.resolve(__dirname, './src'),
-      '@': path.resolve(__dirname, './src'),
+      '~': path.resolve(__dirname, './'),
+      '@': path.resolve(__dirname, './'),
     },
   },
   test: {
