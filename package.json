@@ -38,7 +38,7 @@
     "@storybook/vue3": "^8.0.6",
     "@testing-library/vue": "^8.0.3",
     "@vue/test-utils": "^2.4.5",
-    "eslint": "^9.0.0",
+    "eslint": "^9.1.0",
     "happy-dom": "^14.7.1",
     "playwright-core": "^1.43.0",
     "storybook": "^8.0.6",
