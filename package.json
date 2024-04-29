@@ -41,7 +41,7 @@
     "eslint": "^9.1.1",
     "happy-dom": "^14.7.1",
     "playwright-core": "^1.43.1",
-    "storybook": "^8.0.6",
+    "storybook": "^8.0.9",
     "unplugin-auto-import": "^0.17.5",
     "vitest": "^1.4.0"
   }
