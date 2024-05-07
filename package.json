@@ -18,14 +18,14 @@
   "dependencies": {
     "@aspida/fetch": "^1.14.0",
     "@nuxt/eslint": "^0.3.10",
-    "@vee-validate/zod": "^4.12.6",
+    "@vee-validate/zod": "^4.12.7",
     "aspida": "^1.14.0",
     "aspida-mock": "^0.11.1",
     "nuxt": "^3.11.2",
-    "vee-validate": "^4.12.6",
+    "vee-validate": "^4.12.7",
     "vue": "^3.4.26",
     "vue-router": "^4.3.2",
-    "zod": "^3.23.5"
+    "zod": "^3.23.6"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.3.10",
@@ -33,16 +33,16 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/storybook": "^8.0.0",
     "@storybook-vue/nuxt": "^0.2.7",
-    "@storybook/addon-essentials": "^8.0.9",
-    "@storybook/addon-interactions": "^8.0.9",
-    "@storybook/vue3": "^8.0.9",
+    "@storybook/addon-essentials": "^8.0.10",
+    "@storybook/addon-interactions": "^8.0.10",
+    "@storybook/vue3": "^8.0.10",
     "@testing-library/vue": "^8.0.3",
     "@vue/test-utils": "^2.4.5",
-    "eslint": "^9.1.1",
+    "eslint": "^9.2.0",
     "happy-dom": "^14.7.1",
     "playwright-core": "^1.43.1",
-    "storybook": "^8.0.9",
+    "storybook": "^8.0.10",
     "unplugin-auto-import": "^0.17.5",
-    "vitest": "^1.5.3"
+    "vitest": "^1.6.0"
   }
 }
