@@ -9,8 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "storybook": "storybook dev -p 6006",
-    "lint": "eslint . --ignore-pattern 'api/$api.ts'",
-    "fix": "eslint --fix . --ignore-pattern 'api/$api.ts'",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
     "test": "vitest",
     "test:update": "vitest -u",
     "api:build": "aspida && aspida-mock"

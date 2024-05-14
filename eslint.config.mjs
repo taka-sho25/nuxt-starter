@@ -2,7 +2,7 @@
 import withNuxt from './.nuxt/eslint.config.mjs';
 
 export default withNuxt({
-  ignores: ['api/$api.ts', 'api/$mock.ts'],
+  files: ['**/*.vue', '**/*.ts'],
   rules: {
     'vue/multi-word-component-names': 'off',
     'vue/html-self-closing': ['error', {
@@ -14,4 +14,6 @@ export default withNuxt({
     }],
     'vue/no-multiple-template-root': 'off',
   },
+}).append({
+  ignores: ['api/$api.ts', 'api/$mock.ts', '**/.nuxt-storybook/'],
 });
