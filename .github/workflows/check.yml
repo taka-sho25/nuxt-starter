@@ -1,0 +1,44 @@
+name: Check
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        shell: "bash"
+        working-directory: ./
+        run: bun install
+
+      - name: Build
+        shell: "bash"
+        working-directory: ./
+        run: bun run build
+
+      - name: Lint
+        shell: "bash"
+        working-directory: ./
+        run: bun run lint
+
+      - name: Test
+        shell: "bash"
+        working-directory: ./
+        run: bun run test
