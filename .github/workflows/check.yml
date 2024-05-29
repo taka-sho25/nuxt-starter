@@ -22,26 +22,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+          cache-dependency-path: ./yarn.lock
+          cache: 'yarn'
 
       - name: Install
         shell: "bash"
         working-directory: ./
-        run: bun install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build
         shell: "bash"
         working-directory: ./
-        run: bun run build
+        run: yarn run build
 
       - name: Lint
         shell: "bash"
         working-directory: ./
-        run: bun run lint
+        run: yarn run lint
 
       - name: Test
         shell: "bash"
         working-directory: ./
-        run: bun run test
+        run: yarn run test
