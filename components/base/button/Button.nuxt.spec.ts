@@ -1,7 +1,9 @@
-import { describe, test, expect } from 'vitest';
+import { vi, describe, test, expect } from 'vitest';
 import { renderSuspended } from '@nuxt/test-utils/runtime';
 
 import Button from './index.vue';
+
+vi.spyOn(console, 'warn').mockImplementation(() => {});
 
 describe('Button test', () => {
   test('default snapshot', async () => {

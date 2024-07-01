@@ -6,8 +6,6 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 - ✅ Reset CSS with [Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/)
 
-- ✅ Component Workshop with [@nuxtjs/storybook](https://github.com/nuxt-modules/storybook#readme)
-
 - ✅ Google Font with [@nuxtjs/google-fonts](https://github.com/nuxt-modules/google-fonts#readme)
 
 - ✅ Unit Text with [vitest](https://github.com/vitest-dev/vitest#readme)

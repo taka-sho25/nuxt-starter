@@ -15,5 +15,5 @@ export default withNuxt({
     'vue/no-multiple-template-root': 'off',
   },
 }).append({
-  ignores: ['api/$api.ts', 'api/$mock.ts', '**/.nuxt-storybook/'],
+  ignores: ['api/$api.ts', 'api/$mock.ts'],
 });
