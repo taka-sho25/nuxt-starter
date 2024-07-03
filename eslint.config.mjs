@@ -1,7 +1,14 @@
 // @ts-check
+import globals from 'globals';
 import withNuxt from './.nuxt/eslint.config.mjs';
 
 export default withNuxt({
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+    },
+  },
   files: ['**/*.vue', '**/*.ts'],
   rules: {
     'vue/multi-word-component-names': 'off',
@@ -13,6 +20,9 @@ export default withNuxt({
       },
     }],
     'vue/no-multiple-template-root': 'off',
+    'vue/max-attributes-per-line': ['error', {
+      singleline: 5,
+    }],
   },
 }).append({
   ignores: ['api/$api.ts', 'api/$mock.ts'],

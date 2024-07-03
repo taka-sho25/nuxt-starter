@@ -10,6 +10,21 @@ export default defineNuxtConfig({
     },
   },
 
+  app: {
+    head: {
+      title: '',
+      htmlAttrs: {
+        lang: 'ja',
+      },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'robots', content: 'noindex, nofollow' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
+    },
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxtjs/google-fonts',
@@ -20,6 +35,7 @@ export default defineNuxtConfig({
     config: {
       stylistic: {
         semi: true,
+        braceStyle: '1tbs',
       },
     },
   },
