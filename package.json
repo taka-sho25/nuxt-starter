@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --dotenv .env.development",
+    "dev": "cross-env NODE_ENV=development APP_STAGE=development nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -33,6 +33,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@testing-library/vue": "^8.1.0",
     "@vue/test-utils": "^2.4.6",
+    "cross-env": "^7.0.3",
     "eslint": "^9.6.0",
     "happy-dom": "^14.12.3",
     "playwright-core": "^1.45.0",
