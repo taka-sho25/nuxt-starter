@@ -40,6 +40,11 @@ export default defineNuxtConfig({
     },
   },
 
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
+
   css: ['@/assets/css/reset.css'],
 
   components: [

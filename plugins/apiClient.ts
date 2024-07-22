@@ -8,7 +8,7 @@ export default defineNuxtPlugin(() => {
 
   const fetchConfig = {
     credentials: 'include',
-    baseURL: config.public.baseUrl,
+    baseURL: config.public.BASE_URL,
     throwHttpErrors: true,
     mode: 'cors',
     headers: {
