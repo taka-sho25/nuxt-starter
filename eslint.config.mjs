@@ -23,6 +23,7 @@ export default withNuxt({
     'vue/max-attributes-per-line': ['error', {
       singleline: 5,
     }],
+    'max-len': ['error', { code: 120 }],
   },
 }).append({
   ignores: ['api/$api.ts', 'api/$mock.ts'],
