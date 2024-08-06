@@ -24,6 +24,8 @@ export default withNuxt({
       singleline: 5,
     }],
     'max-len': ['error', { code: 120 }],
+    '@typescript-eslint/no-require-imports': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 }).append({
   ignores: ['api/$api.ts', 'api/$mock.ts'],
