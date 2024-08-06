@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const environment = process.env.APP_STAGE || 'production';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const envSet = require(`./env.${environment}.js`);
 
 export default defineNuxtConfig({
