@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  type Props = {
-    as: 'div' | 'p' | 'span' | 'label';
-    size?: number;
-    weight?: 'light' | 'medium' | 'bold';
-    lineClamp?: number;
-  };
+type Props = {
+  as: 'div' | 'p' | 'span' | 'label';
+  size?: number;
+  weight?: 'light' | 'medium' | 'bold';
+  lineClamp?: number;
+};
 
 const props = withDefaults(defineProps<Props>(), {
   as: 'div',
@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const tag = computed(() => props.as);
 
-const lineClamp = computed(() => {
+const lineClampStyle = computed(() => {
   return props.lineClamp
     ? {
         overflow: 'hidden',
@@ -31,8 +31,8 @@ const lineClamp = computed(() => {
 <template>
   <component
     :is="tag"
-    :class="['text', `text-${weight}`]"
-    :style="{ ...lineClamp, fontSize: `${props.size}px` }"
+    :class="['text', `text-${props.weight}`]"
+    :style="{ ...lineClampStyle, fontSize: `${props.size}px` }"
   >
     <slot />
   </component>
