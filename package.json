@@ -17,11 +17,11 @@
   },
   "dependencies": {
     "@aspida/fetch": "^1.14.0",
-    "@nuxt/eslint": "^0.5.5",
+    "@nuxt/eslint": "^0.5.6",
     "@vee-validate/zod": "^4.13.2",
     "aspida": "^1.14.0",
     "aspida-mock": "^0.11.1",
-    "nuxt": "^3.13.0",
+    "nuxt": "^3.13.1",
     "typescript": "^5.5.4",
     "vee-validate": "^4.13.1",
     "vue": "^3.4.38",
@@ -35,12 +35,12 @@
     "@testing-library/vue": "^8.1.0",
     "@vue/test-utils": "^2.4.6",
     "cross-env": "^7.0.3",
-    "eslint": "^9.9.1",
+    "eslint": "^9.10.0",
     "globals": "^15.9.0",
     "happy-dom": "^15.7.3",
-    "playwright-core": "^1.46.1",
+    "playwright-core": "^1.47.0",
     "postcss-html": "^1.7.0",
-    "sass": "^1.77.8",
+    "sass": "^1.78.0",
     "stylelint": "^16.9.0",
     "stylelint-config-recess-order": "^5.1.0",
     "stylelint-config-recommended-scss": "^14.1.0",
@@ -50,6 +50,6 @@
     "stylelint-scss": "^6.5.1",
     "unplugin-auto-import": "^0.18.2",
     "vitest": "^2.0.5",
-    "vue-tsc": "^2.1.4"
+    "vue-tsc": "^2.1.6"
   }
 }
