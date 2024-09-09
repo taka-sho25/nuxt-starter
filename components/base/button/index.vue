@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  type Props = {
-    type: 'button' | 'submit' | 'reset';
-    disabled?: boolean;
-  };
+type Props = {
+  type: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+};
 
 interface Emits {
   (eventName: 'onClick'): void;
