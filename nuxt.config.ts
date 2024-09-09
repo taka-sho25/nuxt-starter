@@ -4,7 +4,9 @@ const environment = process.env.APP_STAGE || 'production';
 const envSet = require(`./env.${environment}.js`);
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: false,
+  },
 
   runtimeConfig: {
     public: envSet,
@@ -12,7 +14,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: '',
+      title: 'nuxt-starter',
       htmlAttrs: {
         lang: 'ja',
       },

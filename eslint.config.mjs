@@ -11,6 +11,7 @@ export default withNuxt({
   },
   files: ['**/*.vue', '**/*.ts'],
   rules: {
+    'curly': 'error',
     'vue/multi-word-component-names': 'off',
     'vue/html-self-closing': ['error', {
       html: {
