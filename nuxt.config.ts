@@ -4,12 +4,22 @@ const environment = process.env.APP_STAGE || 'production';
 const envSet = require(`./env.${environment}.js`);
 
 export default defineNuxtConfig({
+  modules: [
+    '@nuxt/eslint',
+    '@nuxtjs/google-fonts',
+    '@nuxt/test-utils/module',
+  ],
+
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+      extensions: ['vue'],
+    },
+  ],
+
   devtools: {
     enabled: false,
-  },
-
-  runtimeConfig: {
-    public: envSet,
   },
 
   app: {
@@ -27,11 +37,16 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    '@nuxt/eslint',
-    '@nuxtjs/google-fonts',
-    '@nuxt/test-utils/module',
-  ],
+  css: ['@/assets/css/reset.css'],
+
+  runtimeConfig: {
+    public: envSet,
+  },
+
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
 
   eslint: {
     config: {
@@ -41,19 +56,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  typescript: {
-    strict: true,
-    typeCheck: true,
-  },
-
-  css: ['@/assets/css/reset.css'],
-
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-      extensions: ['vue'],
-    },
-  ],
 });
