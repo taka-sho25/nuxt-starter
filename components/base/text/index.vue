@@ -39,19 +39,19 @@ const lineClampStyle = computed(() => {
 </template>
 
 <style scoped>
-  .text {
-    line-height: 1.4;
-  }
+.text {
+  line-height: 1.4;
+}
 
-  .text-light {
-    font-weight: 300;
-  }
+.text-light {
+  font-weight: 300;
+}
 
-  .text-medium {
-    font-weight: 500;
-  }
+.text-medium {
+  font-weight: 500;
+}
 
-  .text-bold {
-    font-weight: 700;
-  }
+.text-bold {
+  font-weight: 700;
+}
 </style>

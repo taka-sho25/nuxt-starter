@@ -4,11 +4,7 @@ const environment = process.env.APP_STAGE || 'production';
 const envSet = require(`./env.${environment}.js`);
 
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxtjs/google-fonts',
-    '@nuxt/test-utils/module',
-  ],
+  modules: ['@nuxt/eslint', '@nuxtjs/google-fonts', '@nuxt/test-utils/module'],
 
   components: [
     {
@@ -51,6 +47,7 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: {
+        quoteProps: 'as-needed',
         semi: true,
         braceStyle: '1tbs',
       },

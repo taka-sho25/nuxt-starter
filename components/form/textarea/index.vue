@@ -45,12 +45,7 @@ const onChange = (event: Event) => {
       :disabled="disabled"
       @input="onChange"
     />
-    <Text
-      v-if="error"
-      as="span"
-      :size="10"
-      class="error-message"
-    >
+    <Text v-if="error" as="span" :size="10" class="error-message">
       {{ error }}
     </Text>
   </div>

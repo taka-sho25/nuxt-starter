@@ -24,12 +24,7 @@ const onClick = (event: Event) => {
 </script>
 
 <template>
-  <button
-    :type="type"
-    :disabled="disabled"
-    class="button"
-    @click="onClick"
-  >
+  <button :type="type" :disabled="disabled" class="button" @click="onClick">
     <slot />
   </button>
 </template>

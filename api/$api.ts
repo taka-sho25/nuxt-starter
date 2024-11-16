@@ -9,12 +9,33 @@ const api = <T>({ baseURL, fetch }: AspidaClient<T>) => {
 
   return {
     articles: {
-      get: (option?: { query?: Methods_1f8fbl5['get']['query'] | undefined, config?: T | undefined } | undefined) =>
-        fetch<Methods_1f8fbl5['get']['resBody']>(prefix, PATH0, GET, option).json(),
-      $get: (option?: { query?: Methods_1f8fbl5['get']['query'] | undefined, config?: T | undefined } | undefined) =>
-        fetch<Methods_1f8fbl5['get']['resBody']>(prefix, PATH0, GET, option).json().then(r => r.body),
-      $path: (option?: { method?: 'get' | undefined; query: Methods_1f8fbl5['get']['query'] } | undefined) =>
-        `${prefix}${PATH0}${option && option.query ? `?${dataToURLString(option.query)}` : ''}`,
+      get: (
+        option?:
+          | {
+              query?: Methods_1f8fbl5['get']['query'] | undefined;
+              config?: T | undefined;
+            }
+          | undefined,
+      ) => fetch<Methods_1f8fbl5['get']['resBody']>(prefix, PATH0, GET, option).json(),
+      $get: (
+        option?:
+          | {
+              query?: Methods_1f8fbl5['get']['query'] | undefined;
+              config?: T | undefined;
+            }
+          | undefined,
+      ) =>
+        fetch<Methods_1f8fbl5['get']['resBody']>(prefix, PATH0, GET, option)
+          .json()
+          .then((r) => r.body),
+      $path: (
+        option?:
+          | {
+              method?: 'get' | undefined;
+              query: Methods_1f8fbl5['get']['query'];
+            }
+          | undefined,
+      ) => `${prefix}${PATH0}${option && option.query ? `?${dataToURLString(option.query)}` : ''}`,
     },
   };
 };

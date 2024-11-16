@@ -4,6 +4,7 @@ module.exports = {
     'stylelint-config-recess-order',
     'stylelint-config-recommended-vue',
     'stylelint-config-recommended-scss',
+    'stylelint-prettier/recommended',
   ],
   overrides: [
     {
@@ -14,7 +15,7 @@ module.exports = {
   rules: {
     'selector-class-pattern': null,
     'selector-id-pattern': null,
-    'selector-pseudo-class-no-unknown': null, // ::v-deepエラー回避
+    'selector-pseudo-class-no-unknown': null, // ignore ::v-deep error
     'value-keyword-case': [
       'lower',
       {
