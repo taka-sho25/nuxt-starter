@@ -18,6 +18,7 @@
   "dependencies": {
     "@aspida/fetch": "^1.14.0",
     "@nuxt/eslint": "^0.7.1",
+    "@nuxt/icon": "^1.8.2",
     "@vee-validate/zod": "^4.14.7",
     "aspida": "^1.14.0",
     "aspida-mock": "^0.11.1",

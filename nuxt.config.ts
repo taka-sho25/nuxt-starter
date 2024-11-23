@@ -4,7 +4,7 @@ const environment = process.env.APP_STAGE || 'production';
 const envSet = require(`./env.${environment}.js`);
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxtjs/google-fonts', '@nuxt/test-utils/module'],
+  modules: ['@nuxt/eslint', '@nuxtjs/google-fonts', '@nuxt/icon', '@nuxt/test-utils/module'],
 
   components: [
     {
@@ -39,6 +39,8 @@ export default defineNuxtConfig({
     public: envSet,
   },
 
+  compatibilityDate: '2024-11-24',
+
   typescript: {
     strict: true,
     typeCheck: true,
@@ -52,5 +54,9 @@ export default defineNuxtConfig({
         braceStyle: '1tbs',
       },
     },
+  },
+
+  icon: {
+    componentName: 'NuxtIcon',
   },
 });
