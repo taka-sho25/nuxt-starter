@@ -62,6 +62,7 @@ export default withNuxt(
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/no-var-requires': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
 );

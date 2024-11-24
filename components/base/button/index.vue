@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type Props = {
+export type Props = {
   type: 'button' | 'submit' | 'reset';
   disabled?: boolean;
 };

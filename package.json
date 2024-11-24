@@ -13,6 +13,7 @@
     "prettier": "prettier --write '**/*.{js,ts,vue,json,scss}'",
     "test": "vitest",
     "test:update": "vitest -u",
+    "storybook": "cross-env APP_STAGE=development storybook dev --port 6006",
     "api:build": "aspida && aspida-mock"
   },
   "dependencies": {
@@ -33,6 +34,10 @@
     "@nuxt/eslint-config": "^0.7.1",
     "@nuxt/test-utils": "^3.14.4",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/storybook": "^8.3.2",
+    "@storybook/addon-essentials": "^8.4.5",
+    "@storybook/addon-interactions": "^8.4.5",
+    "@storybook/addon-links": "^8.4.5",
     "@testing-library/vue": "^8.1.0",
     "@vue/test-utils": "^2.4.6",
     "cross-env": "^7.0.3",
@@ -44,6 +49,7 @@
     "postcss-html": "^1.7.0",
     "prettier": "^3.3.3",
     "sass": "^1.81.0",
+    "storybook": "^8.4.5",
     "stylelint": "^16.10.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^5.1.1",
@@ -54,6 +60,7 @@
     "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^6.9.0",
     "unplugin-auto-import": "^0.18.4",
+    "unplugin-vue-components": "^0.27.4",
     "vitest": "^2.1.5",
     "vue-tsc": "^2.1.10"
   }
