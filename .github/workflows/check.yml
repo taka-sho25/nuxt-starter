@@ -26,21 +26,26 @@ jobs:
           cache: 'yarn'
 
       - name: Install
-        shell: "bash"
+        shell: 'bash'
         working-directory: ./
         run: yarn install --immutable
 
       - name: Build
-        shell: "bash"
+        shell: 'bash'
         working-directory: ./
         run: yarn run build
 
-      - name: Lint
-        shell: "bash"
+      - name: Lint:js
+        shell: 'bash'
         working-directory: ./
         run: yarn run lint
 
+      - name: Lint:style
+        shell: 'bash'
+        working-directory: ./
+        run: yarn run lint:style
+
       - name: Test
-        shell: "bash"
+        shell: 'bash'
         working-directory: ./
         run: yarn run test

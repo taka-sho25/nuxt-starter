@@ -1,11 +1,5 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard-scss',
-    'stylelint-config-recess-order',
-    'stylelint-config-recommended-vue',
-    'stylelint-config-recommended-scss',
-    'stylelint-prettier/recommended',
-  ],
+  extends: ['stylelint-config-recess-order', 'stylelint-config-recommended-vue', 'stylelint-prettier/recommended'],
   overrides: [
     {
       files: ['**/*.vue'],
