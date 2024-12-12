@@ -10,7 +10,7 @@
       <li>
         <div class="item">
           <Icon icon-name="material-symbols:360" />
-          <NuxtLink to="/api"> Api </NuxtLink>
+          <NuxtLink to="/aspida-api">Aspida Api Sample</NuxtLink>
         </div>
       </li>
     </ul>

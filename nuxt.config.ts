@@ -4,7 +4,14 @@ const environment = process.env.APP_STAGE || 'production';
 const envSet = require(`./env.${environment}.js`);
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxtjs/google-fonts', '@nuxt/icon', '@nuxt/test-utils/module', '@nuxtjs/storybook'],
+  modules: [
+    '@nuxt/image',
+    '@nuxt/eslint',
+    '@nuxtjs/google-fonts',
+    '@nuxt/icon',
+    '@nuxt/test-utils/module',
+    '@nuxtjs/storybook',
+  ],
 
   components: [
     {

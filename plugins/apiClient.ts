@@ -20,7 +20,7 @@ export default defineNuxtPlugin(() => {
   return {
     provide: {
       apiClient() {
-        return config.public.appStage === 'development'
+        return config.public.APP_STAGE === 'development'
           ? mock(aspida(fetch, fetchConfig))
           : api(aspida(fetch, fetchConfig));
       },

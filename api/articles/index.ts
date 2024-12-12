@@ -1,5 +1,6 @@
 import type { DefineMethods } from 'aspida';
 import { mockMethods } from 'aspida-mock';
+import dayjs from 'dayjs';
 
 type Article = {
   id: number;
@@ -25,7 +26,7 @@ const MockArticle = (id: number) => ({
   id,
   image: 'https://placehold.jp/350x250.png',
   title: `Article Sample -- ${id}`,
-  created_at: '9999-12-31',
+  created_at: `${dayjs().add(id, 'd').format('YYYY-MM-DD')}`,
 });
 
 export default mockMethods<Methods>({
