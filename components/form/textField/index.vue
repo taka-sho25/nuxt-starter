@@ -1,6 +1,7 @@
 <script setup lang="ts">
 type Props = {
   modelValue: string;
+  label?: string;
   type?: 'text' | 'number' | 'password';
   name?: string;
   placeholder: string;
@@ -14,6 +15,7 @@ interface Emits {
 
 withDefaults(defineProps<Props>(), {
   modelValue: '',
+  label: '',
   type: 'text',
   name: '',
   placeholder: '',
@@ -34,7 +36,9 @@ const onChange = (event: Event) => {
 
 <template>
   <div>
+    <label v-if="label" :for="name" class="label">{{ label }}</label>
     <input
+      :id="name"
       :name="name"
       :type="type"
       :value="modelValue"
@@ -51,6 +55,10 @@ const onChange = (event: Event) => {
 </template>
 
 <style scoped>
+.label {
+  margin-bottom: 4px;
+}
+
 .text-field {
   width: 100%;
 }

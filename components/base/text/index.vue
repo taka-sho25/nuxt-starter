@@ -1,6 +1,6 @@
 <script setup lang="ts">
 type Props = {
-  as: 'div' | 'p' | 'span' | 'label';
+  as?: 'div' | 'p' | 'span' | 'label';
   size?: number;
   weight?: 'light' | 'medium' | 'bold';
   lineClamp?: number;

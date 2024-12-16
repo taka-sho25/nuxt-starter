@@ -47,12 +47,7 @@ export default withNuxt(
         },
       ],
       'vue/no-multiple-template-root': 'off',
-      'vue/max-attributes-per-line': [
-        'error',
-        {
-          singleline: 5,
-        },
-      ],
+      'vue/max-attributes-per-line': 'off',
       'vue/singleline-html-element-content-newline': 'off',
     },
   },
