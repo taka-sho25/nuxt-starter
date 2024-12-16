@@ -13,6 +13,12 @@
           <NuxtLink to="/aspida-api">Aspida Api Sample</NuxtLink>
         </div>
       </li>
+      <li>
+        <div class="item">
+          <Icon icon-name="material-symbols:360" />
+          <NuxtLink to="/icons">Nuxt Icons</NuxtLink>
+        </div>
+      </li>
     </ul>
   </div>
 </template>

@@ -41,6 +41,7 @@ const onChange = (event: Event) => {
       :placeholder="placeholder"
       :disabled="disabled"
       autocomplete="off"
+      class="text-field"
       @input="onChange"
     />
     <Text v-if="error" as="span" :size="10" class="error-message">
@@ -50,6 +51,10 @@ const onChange = (event: Event) => {
 </template>
 
 <style scoped>
+.text-field {
+  width: 100%;
+}
+
 .error-message {
   color: #f00;
 }
