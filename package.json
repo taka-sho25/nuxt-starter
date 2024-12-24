@@ -31,9 +31,9 @@
   },
   "dependencies": {
     "@aspida/fetch": "^1.14.0",
-    "@nuxt/eslint": "^0.7.3",
-    "@nuxt/icon": "^1.10.2",
-    "@vee-validate/zod": "^4.14.7",
+    "@nuxt/eslint": "^0.7.4",
+    "@nuxt/icon": "^1.10.3",
+    "@vee-validate/zod": "^4.15.0",
     "aspida": "^1.14.0",
     "aspida-mock": "^0.11.1",
     "dayjs": "^1.11.13",
