@@ -38,7 +38,7 @@
     "aspida-mock": "^0.11.1",
     "dayjs": "^1.11.13",
     "nuxt": "^3.14.1592",
-    "typescript": "5.6.3",
+    "typescript": "^5.7.2",
     "vee-validate": "^4.13.1",
     "vue-router": "^4.5.0",
     "zod": "^3.24.1"
