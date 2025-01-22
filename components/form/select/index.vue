@@ -57,8 +57,8 @@ const onChange = (event: Event) => {
   padding: 4px 0;
   vertical-align: middle;
   appearance: none;
-  background-color: #fff;
   outline: none;
+  background-color: #fff;
 }
 
 .select-wrap:after {
@@ -67,9 +67,9 @@ const onChange = (event: Event) => {
   right: 0;
   width: 14px;
   height: 8px;
-  clip-path: polygon(50% 85%, 0 0, 100% 0);
   content: '';
   background: #858c94;
+  clip-path: polygon(50% 85%, 0 0, 100% 0);
   transform: translate(-50%, -50%);
 }
 </style>
