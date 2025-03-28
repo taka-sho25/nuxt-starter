@@ -4,7 +4,7 @@ type Props = {
   label?: string;
   type?: 'text' | 'number' | 'password';
   name?: string;
-  placeholder: string;
+  placeholder?: string;
   disabled?: boolean;
   error?: string;
 };
@@ -14,7 +14,6 @@ interface Emits {
 }
 
 withDefaults(defineProps<Props>(), {
-  modelValue: '',
   label: '',
   type: 'text',
   name: '',

@@ -5,7 +5,7 @@ type Props = {
   name?: string;
   rows?: number;
   cols?: number;
-  placeholder: string;
+  placeholder?: string;
   disabled?: boolean;
   error?: string;
 };
@@ -15,7 +15,6 @@ interface Emits {
 }
 
 withDefaults(defineProps<Props>(), {
-  modelValue: '',
   label: '',
   name: '',
   rows: 2,
