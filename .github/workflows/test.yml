@@ -1,0 +1,70 @@
+name: Frontend Test
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ci_node_total: [2]
+        ci_node_index: [0, 1]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache-dependency-path: ./yarn.lock
+          cache: 'yarn'
+
+      - name: Cache Playwright Browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-browsers
+
+      - name: Cache Nuxt Build Output
+        id: nuxt-cache
+        uses: actions/cache@v4
+        with:
+          path: ./.output
+          key: ${{ runner.os }}-nuxt-output-${{ hashFiles('yarn.lock', 'nuxt.config.*') }}-${{ github.run_number }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-output-${{ hashFiles('yarn.lock', 'nuxt.config.*') }}-
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Install Playwright Browsers
+        run: yarn playwright:install
+
+      - name: Build Nuxt App (if needed)
+        if: steps.nuxt-cache.outputs.cache-hit != 'true'
+        run: yarn build
+
+      - name: Save Nuxt Build Cache
+        if: success() && steps.nuxt-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ./.output
+          key: ${{ steps.nuxt-cache.outputs.cache-primary-key }}
+
+      - name: Run Playwright tests
+        env: # CircleCI と同じコマンドで動くようにしているため変数名は妥協している
+          CIRCLE_NODE_TOTAL: ${{ matrix.ci_node_total }}
+          CIRCLE_NODE_INDEX: ${{ matrix.ci_node_index }}
+        run: yarn run playwright:ci
