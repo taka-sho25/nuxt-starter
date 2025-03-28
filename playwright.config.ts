@@ -28,7 +28,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'HOST=127.0.0.1 PORT=8585 npm-run-all -p prism start:test',
+    command: 'HOST=127.0.0.1 PORT=8585 npm-run-all -p prism start',
     url: 'http://127.0.0.1:8585',
     reuseExistingServer: !process.env.CI,
     timeout: 60 * 1000,
