@@ -64,4 +64,7 @@ jobs:
           key: ${{ steps.nuxt-cache.outputs.cache-primary-key }}
 
       - name: Run Playwright tests
+        env: # CircleCI と同じコマンドで動くようにしているため変数名は妥協している
+          CIRCLE_NODE_TOTAL: ${{ matrix.ci_node_total }}
+          CIRCLE_NODE_INDEX: ${{ matrix.ci_node_index }}
         run: yarn run playwright:ci
