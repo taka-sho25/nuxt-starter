@@ -1,21 +1,13 @@
 name: Frontend Test
 
-defaults:
-  run:
-    working-directory: ./frontend
-
 on:
+  push:
+    branches:
+      - main
+
   pull_request:
-    paths:
-      - frontend/**
-      - .github/workflows/frontend-test.yml
-
-permissions:
-  contents: read
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
-  cancel-in-progress: true
+    branches:
+      - main
 
 jobs:
   test:
