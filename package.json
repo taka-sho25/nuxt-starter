@@ -43,7 +43,7 @@
     "aspida": "^1.14.0",
     "aspida-mock": "^0.11.1",
     "dayjs": "^1.11.13",
-    "nuxt": "^3.16.2",
+    "nuxt": "^3.17.0",
     "typescript": "^5.8.3",
     "vee-validate": "^4.13.1",
     "vue-router": "^4.5.0",
@@ -61,10 +61,10 @@
     "@storybook/addon-interactions": "^8.6.12",
     "@storybook/addon-links": "^8.6.12",
     "@testing-library/vue": "^8.1.0",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.15.3",
     "@vue/test-utils": "^2.4.6",
     "cross-env": "^7.0.3",
-    "eslint": "^9.25.0",
+    "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
     "globals": "^16.0.0",
     "happy-dom": "^17.4.4",
@@ -74,7 +74,7 @@
     "postcss-html": "^1.8.0",
     "prettier": "^3.5.3",
     "storybook": "^8.6.12",
-    "stylelint": "^16.18.0",
+    "stylelint": "^16.19.1",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-recommended-vue": "^1.6.0",
@@ -83,6 +83,6 @@
     "unplugin-auto-import": "^19.1.2",
     "unplugin-vue-components": "^28.5.0",
     "vitest": "^3.1.2",
-    "vue-tsc": "^2.2.8"
+    "vue-tsc": "^2.2.10"
   }
 }
