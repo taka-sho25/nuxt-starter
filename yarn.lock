@@ -6458,10 +6458,10 @@ handler-agent@0.2.0:
   resolved "https://registry.yarnpkg.com/handler-agent/-/handler-agent-0.2.0.tgz#bb77cd70b60bd7073b5327a7c3dbaec9420165d4"
   integrity sha512-cUduQxa5p3TFtGmb55mrRbkk/3EJCsLSeFrCIuTakQHQlYVWXeW2L9IUQUHyoHLI4UgpBNaN2JrZ0He1jPu+vg==
 
-happy-dom@^18.0.1:
-  version "18.0.1"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-18.0.1.tgz#8f8a2199462842deb675f54e405af55f3b674540"
-  integrity sha512-qn+rKOW7KWpVTtgIUi6RVmTBZJSe2k0Db0vh1f7CWrWclkkc7/Q+FrOfkZIb2eiErLyqu5AXEzE7XthO9JVxRA==
+happy-dom@^20.0.2:
+  version "20.0.2"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-20.0.2.tgz#da676a1e3d0742aff8ba4789db90445842538808"
+  integrity sha512-pYOyu624+6HDbY+qkjILpQGnpvZOusItCk+rvF5/V+6NkcgTKnbOldpIy22tBnxoaLtlM9nXgoqAcW29/B7CIw==
   dependencies:
     "@types/node" "^20.0.0"
     "@types/whatwg-mimetype" "^3.0.2"
